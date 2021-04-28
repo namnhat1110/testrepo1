@@ -1,4 +1,5 @@
 import React from 'react'
+import TodoListItem from './components/TodoListItem'
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
           <h1>Redux Fundamentals Example</h1>
 
           <div className="navContent">
-            <div className="navLinks"></div>
+            <div className="navLinks">
+              <TodoListItem />
+            </div>
           </div>
         </section>
       </nav>
