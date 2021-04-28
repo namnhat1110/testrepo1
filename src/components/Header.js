@@ -1,16 +1,19 @@
 import React from 'react'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 const Header = () => {
   const [text, setText] = useState('')
-
+  const dispatch = useDispatch()
   const handleChange = (e) => setText(e.target.value)
 
   const handleKeyDown = (e) => {
     // If the user pressed the Enter key:
     const trimmedText = text.trim()
+    console.log({ trimmedText })
     if (e.which === 13 && trimmedText) {
-      alert('adding todo: ' + trimmedText)
+      dispatch({ type: 'addTodo', payload: trimmedText })
+      setText('')
     }
   }
   return (

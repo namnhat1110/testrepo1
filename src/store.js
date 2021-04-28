@@ -9,6 +9,9 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
+  if (action.type === 'addTodo') {
+    return { todos: [...state.todos, { id: 3, text: action.payload }] }
+  }
   return state
 }
 const store = createStore(reducer)

@@ -1,5 +1,6 @@
 import React from 'react'
-import TodoListItem from './components/TodoListItem'
+import Header from './components/Header'
+import TodoList from './components/TodoList'
 
 function App() {
   return (
@@ -9,14 +10,13 @@ function App() {
           <h1>Redux Fundamentals Example</h1>
 
           <div className="navContent">
-            <div className="navLinks">
-              <TodoListItem />
-            </div>
+            <div className="navLinks"></div>
           </div>
         </section>
       </nav>
       <section>
-        <h2>Welcome to the Redux Fundamentals example app!</h2>
+        <Header />
+        <TodoList />
       </section>
     </div>
   )
