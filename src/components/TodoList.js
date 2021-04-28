@@ -6,12 +6,11 @@ const selectTodos = (state) => state.todos
 
 const TodoList = () => {
   const todos = useSelector(selectTodos)
-  console.log({ todos })
   return (
     <div>
       <ul className="todo-list">
         {todos.map((todo) => (
-          <TodoListItem key={todo.id} {...todo} />
+          <TodoListItem id={todo.id} {...todo} />
         ))}
       </ul>
     </div>

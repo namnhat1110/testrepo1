@@ -8,9 +8,7 @@ const Header = () => {
   const handleChange = (e) => setText(e.target.value)
 
   const handleKeyDown = (e) => {
-    // If the user pressed the Enter key:
     const trimmedText = text.trim()
-    console.log({ trimmedText })
     if (e.which === 13 && trimmedText) {
       dispatch({ type: 'addTodo', payload: trimmedText })
       setText('')
