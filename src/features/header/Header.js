@@ -9,8 +9,8 @@ const Header = () => {
 
   const handleKeyDown = (e) => {
     const trimmedText = text.trim()
-    if (e.which === 13 && trimmedText) {
-      dispatch({ type: 'addTodo', payload: trimmedText })
+    if (e.key === 'Enter' && trimmedText) {
+      dispatch({ type: 'todos/todoAdded', payload: trimmedText })
       setText('')
     }
   }
