@@ -3,6 +3,8 @@ import Footer from './features/footer/Footer'
 import Header from './features/header/Header'
 import TodoList from './features/todos/TodoList'
 
+// this is test subject clone from the demo app
+
 function App() {
   return (
     <div className="App">
