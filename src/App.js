@@ -13,7 +13,7 @@ function App() {
       </nav>
       <main>
         <section>
-          <h2>Todos</h2>
+          <h2>Todos List</h2>
           <div className="todoapp">
             <Header />
             <TodoList />

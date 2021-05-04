@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { availableColors } from '../fitlers/colors'
-import { capitalize } from '../fitlers/colors'
-import { AiOutlineDelete } from 'react-icons/ai'
-import { GrUpdate } from 'react-icons/gr'
+import { availableColors } from '../filters/colors'
+import { capitalize } from '../filters/colors'
+import { FiDelete } from 'react-icons/fi'
+
 
 const selectTodoById = (state, todoId) => {
   return state.todos.find((todo) => todo.id === todoId)
@@ -11,7 +11,6 @@ const selectTodoById = (state, todoId) => {
 
 const TodoListItem = ({ id }) => {
   const todo = useSelector((state) => selectTodoById(state, id))
-  const [newText, setNewText] = useState('')
   const { text, completed, color } = todo
   const dispatch = useDispatch()
 
@@ -56,7 +55,7 @@ const TodoListItem = ({ id }) => {
             {colorOptions}
           </select>
           <button className="destroy" onClick={onDelete}>
-            <AiOutlineDelete />
+            <FiDelete />
           </button>
         </div>
       </div>
